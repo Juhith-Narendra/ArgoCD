@@ -1,0 +1,17 @@
+apiversion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: default
+spec:
+  destination:
+    namespace: argocd-juhith
+    server: "https://kubernetes.default.svc"
+  project: project-juhith
+  source:
+    path: guestbook
+    repoURL: "https://github.com/Juhith-Narendra/ArgoCD.git"
+    targetRevision: argocd-juhith
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
