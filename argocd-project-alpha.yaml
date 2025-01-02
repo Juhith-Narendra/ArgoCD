@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: alpha
+  namespace: argocd
+spec:
+  description: "ArgoCD Project created using yaml"
+  sourceRepos:
+    - 'https://github.com/Juhith-Narendra/ArgoCD.git'
+  destinations:
+    - namespace: argocd-juhith
+      server: 'https://kubernetes.default.svc'
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  roles:
+    - name: admin
+      description: "Admin role with all permissions"
+      policies:
+        - p, role:admin, applications, *, project-alpha/*, allow
+      groups:
+        - ArgoCD-Project-alpha-admins
+    - name: reader
+      description: "Reader role with view permissions"
+      policies:
+        - p, role:reader, applications, get, project-alpha/*, allow
+      groups:
+        - ArgoCD-Project-alpha-readers
