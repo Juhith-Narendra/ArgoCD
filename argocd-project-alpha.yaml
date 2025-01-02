@@ -7,9 +7,13 @@ spec:
   description: "ArgoCD Project created using yaml"
   sourceRepos:
     - 'https://github.com/Juhith-Narendra/ArgoCD.git'
+    - 'https://github.com/mabusaa/argocd-course-app-of-apps.git'
+    - 'https://github.com/mabusaa/argocd-example-apps.git'
   destinations:
     - namespace: argocd-juhith
       server: 'https://kubernetes.default.svc'
+    - namespace: argocd
+      server: 'https://kubernetes.default.svc'  
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
