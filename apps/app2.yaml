@@ -11,7 +11,7 @@ spec:
   source: 
     path: kustomize-guestbook
     repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
-    targetRevision: argocd-juhith
+    targetRevision: HEAD
     kustomize:
       namePrefix: staging-
       commonLabels:
