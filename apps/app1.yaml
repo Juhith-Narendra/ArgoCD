@@ -10,7 +10,7 @@ spec:
   project: alpha
   source: 
     path: guestbook
-    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    repoURL: "https://github.com/Juhith-Narendra/ArgoCD.git"
     targetRevision: master
   syncPolicy:
     syncOptions:
