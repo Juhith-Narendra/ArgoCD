@@ -19,9 +19,9 @@ spec:
     kind: Application
   project: alpha
   source:
-    path: directory-of-apps
+    path: apps
     repoURL: "https://github.com/Juhith-Narendra/ArgoCD.git"
-    targetRevision: main
+    targetRevision: argocd-juhith
     directory:
       recurse: true
   syncPolicy:
