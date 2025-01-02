@@ -13,5 +13,9 @@ spec:
     repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
     targetRevision: master
   syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true 
+      selfHeal: true  
     syncOptions:
       - CreateNamespace=true
