@@ -10,8 +10,8 @@ spec:
   project: alpha
   source: 
     path: kustomize-guestbook
-    repoURL: "https://github.com/Juhith-Narendra/ArgoCD.git"
-    targetRevision: master
+    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    targetRevision: argocd-juhith
     kustomize:
       namePrefix: staging-
       commonLabels:
