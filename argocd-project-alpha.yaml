@@ -9,6 +9,7 @@ spec:
     - 'https://github.com/Juhith-Narendra/ArgoCD.git'
     - 'https://github.com/mabusaa/argocd-course-app-of-apps.git'
     - 'https://github.com/mabusaa/argocd-example-apps.git'
+    - 'https://github.com/kubecost/cost-analyzer-helm-chart.git'
   destinations:
     - namespace: argocd-juhith
       server: 'https://kubernetes.default.svc'
