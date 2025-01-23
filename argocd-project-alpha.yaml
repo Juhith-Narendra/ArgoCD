@@ -11,10 +11,8 @@ spec:
     - 'https://github.com/mabusaa/argocd-example-apps.git'
     - 'https://github.com/kubecost/cost-analyzer-helm-chart.git'
   destinations:
-    - namespace: argocd-juhith
+    - namespace: kube-cost
       server: 'https://kubernetes.default.svc'
-    - namespace: argocd
-      server: 'https://kubernetes.default.svc'  
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
